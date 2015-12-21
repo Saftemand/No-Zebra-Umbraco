@@ -419,11 +419,7 @@
     <Content Include="Config\Lang\zh-CN.user.xml" />
     <Content Include="Config\splashes\booting.aspx" />
     <Content Include="Config\splashes\noNodes.aspx" />
-    <Content Include="css\bootstrap.min.css" />
     <Content Include="css\custom-style.css" />
-    <Content Include="css\fanoe.css" />
-    <Content Include="css\rte.css" />
-    <Content Include="css\style.css" />
     <Content Include="default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="js\bootstrap.min.js" />
