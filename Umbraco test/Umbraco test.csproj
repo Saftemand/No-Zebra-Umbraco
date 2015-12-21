@@ -2873,9 +2873,7 @@
     <Content Include="App_Data\TEMP\ClientDependency\518413746_7c4ee921b57a46969785c0735ecafb87.cdJ" />
     <Content Include="App_Data\TEMP\ExamineIndexes\MICHAELMAC-PC\External\Index\segments.gen" />
     <Content Include="App_Data\TEMP\ExamineIndexes\MICHAELMAC-PC\InternalMember\Index\segments.gen" />
-    <Content Include="App_Data\TEMP\ExamineIndexes\MICHAELMAC-PC\InternalMember\Index\segments_2" />
     <Content Include="App_Data\TEMP\ExamineIndexes\MICHAELMAC-PC\Internal\Index\segments.gen" />
-    <Content Include="App_Data\TEMP\ExamineIndexes\MICHAELMAC-PC\Internal\Index\segments_4" />
     <Content Include="App_Data\TEMP\ExamineIndexes\MICHAELMAC-PC\Internal\Index\_1.cfs" />
     <Content Include="App_Data\TEMP\ExamineIndexes\MICHAELMAC-PC\Internal\Index\_1_1.del" />
     <Content Include="App_Data\TEMP\ExamineIndexes\MICHAELMAC-PC\Internal\Index\_2.cfs" />
