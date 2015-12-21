@@ -1,0 +1,34 @@
+﻿@using Umbraco_test.Controller;
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "Master1.cshtml";
+}
+
+
+<!-- Angular testing area end -->
+<div ng-controller="MyController as controller">
+    <h1>Flickr Directory</h1>
+    <br />
+    <input id="txt_tag_holder" type="text" placeholder="Search for tags here ..." autofocus />
+    <br />
+    <br />
+    <input id="chbx_sort" type="checkbox">Sort on date
+    <br />
+    <br />
+    <input id="btn_submit_tags" type="submit" value="Get 10 of dem photos!" ng-click="controller.update('first')" />
+    <input id="btn_submit_tags" type="submit" value="Get ALL dem photos!" ng-click="controller.update('last')" />
+    <br />
+    <br />
+    <ul>
+        <li ng-repeat="item in photoCollection.items">
+            <img ng-src="{{item.media.m}}" alt="Photo of {{item.title}}"/>
+            <div>
+                <h2>{{item.title}}</h2>
+                <h3>{{item.date_taken}}</h3>
+            </div>
+        </li>
+    </ul>
+</div>
+<!-- Angular testing area end -->
+
+

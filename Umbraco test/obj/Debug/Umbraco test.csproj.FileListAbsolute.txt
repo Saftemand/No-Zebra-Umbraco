@@ -1,0 +1,7 @@
+C:\Users\Michael\Documents\Visual Studio 2013\Projects\Umbraco test\Umbraco test\bin\Umbraco test.dll.config
+C:\Users\Michael\Documents\Visual Studio 2013\Projects\Umbraco test\Umbraco test\bin\Umbraco test.dll
+C:\Users\Michael\Documents\Visual Studio 2013\Projects\Umbraco test\Umbraco test\bin\Umbraco test.pdb
+C:\Users\Michael\Documents\Visual Studio 2013\Projects\Umbraco test\Umbraco test\obj\Debug\Umbraco test.csproj.App.config
+C:\Users\Michael\Documents\Visual Studio 2013\Projects\Umbraco test\Umbraco test\obj\Debug\Umbraco test.csprojResolveAssemblyReference.cache
+C:\Users\Michael\Documents\Visual Studio 2013\Projects\Umbraco test\Umbraco test\obj\Debug\Umbraco test.dll
+C:\Users\Michael\Documents\Visual Studio 2013\Projects\Umbraco test\Umbraco test\obj\Debug\Umbraco test.pdb
