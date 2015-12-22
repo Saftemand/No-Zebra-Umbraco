@@ -21,5 +21,11 @@ namespace Umbraco_test.Model
         
         [JsonProperty(PropertyName = "date_taken")]
         public DateTime DateTaken { get; set; }
+
+        private string uniqueToken;
+        [JsonProperty(PropertyName = "unique_token")]
+        public string UniqueToken { get {
+            return Guid.NewGuid().ToString();
+        } }
     }
 }

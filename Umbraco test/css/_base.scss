@@ -1,0 +1,22 @@
+﻿body {
+    background-color: $color-background;
+    font-family: $font-main;
+}
+
+#bootstrap-overrides h1,h2,h3,h4,h5,h6{
+    font-family: $font-highlight;
+    color: $color-headline;
+}
+
+#bootstrap-overrides .jumbotron{
+    @include backImage('../media/sunset.jpg', 20em);
+    padding-right : 0;
+    padding-left : 0;
+    border-radius : 0;
+}
+
+#bootstrap-overrides .container{
+    width:100%;
+    padding-left: 0;
+    padding-right: 0;
+}

@@ -1,7 +1,5 @@
 ﻿var myApp = angular.module('myApp', []);
 
-
-
 var readAllTags = function () {
     var tags = $('#txt_tag_holder').val();
     var tagsCommaDelimited = tags.split(' ').join(',');
@@ -24,6 +22,13 @@ var updateView = function ($scope, $http) {
                 $scope.photoCollection = JSON.parse(data);
                 console.log($scope.photoCollection.items);
                 $scope.update = updateView;
+ 
+                if(firstOrLast === 'first'){
+                    $('#btn-load-more').removeClass('hidden');
+                } else if (firstOrLast === 'last') {
+                    $('#btn-load-more').addClass('hidden');
+                }
+                
             }).error(function (errorResponse) {
                 console.log(errorResponse);
             });
@@ -34,9 +39,10 @@ var updateView = function ($scope, $http) {
 updateView.$inject = ['$scope', '$http'];
 
 $().ready(function () {
-    $('#btn_submit_tags').click(updateView);
+    $('#btn-load-more').click(updateView);
 });
 
 //$scope and $http are put in the strings to keep their identity if the variable-names should be changed during minification
 myApp.controller('MyController', updateView);
+
 

@@ -3,32 +3,60 @@
 @{
     Layout = "Master1.cshtml";
 }
-
-
-<!-- Angular testing area end -->
+<!-- MyController begin -->
 <div ng-controller="MyController as controller">
-    <h1>Flickr Directory</h1>
-    <br />
-    <input id="txt_tag_holder" type="text" placeholder="Search for tags here ..." autofocus />
-    <br />
-    <br />
-    <input id="chbx_sort" type="checkbox">Sort on date
-    <br />
-    <br />
-    <input id="btn_submit_tags" type="submit" value="Get 10 of dem photos!" ng-click="controller.update('first')" />
-    <input id="btn_submit_tags" type="submit" value="Get ALL dem photos!" ng-click="controller.update('last')" />
-    <br />
-    <br />
-    <ul>
-        <li ng-repeat="item in photoCollection.items">
-            <img ng-src="{{item.media.m}}" alt="Photo of {{item.title}}"/>
-            <div>
-                <h2>{{item.title}}</h2>
-                <h3>{{item.date_taken}}</h3>
+    <!-- jumbotron begin -->
+    <div class="container">
+        <div class="jumbotron search-box">
+            <h1 class="text-center">Flickr Feed!</h1>
+
+            <div class="row form-holder center-block">
+                <div class="col-sm-12 col-md-9 col-lg-9 text-center search-component">
+                    <input id="txt_tag_holder" class="form-control" type="text" placeholder="Search for tags here ..." autofocus />
+                </div>
+                <div class="col-sm-12 col-md-3 col-lg-3 text-center search-component">
+                    <input class="btn btn-primary" type="submit" value="Search!" ng-click="controller.update('first')" />
+                </div>
+                <div class="checkbox col-lg-12">
+                    <h4><input id="chbx-sort" type="checkbox">Sort on date</h4>
+                </div>
             </div>
-        </li>
-    </ul>
+        </div>
+    </div>
+    <!-- jumbotron end -->
+
+    <!-- main-content begin -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 thumb" ng-repeat="item in photoCollection.items">
+                <a href="#{{item.unique_token}}" data-toggle="modal" class="thumbnail">
+                    <img class="img-responsive" style="width:400px;height:300px" ng-src="{{item.media.m}}" alt="Photo of {{item.title}}" />
+                </a>
+                <!-- modal begin -->
+                <div class="modal fade" id="{{item.unique_token}}" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header text-center">
+                                <h3>{{item.title}}</h3>
+                                <h6>{{item.date_taken}}</h6>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <img class="center-block" src="{{item.media.f}}">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <a class="btn btn-primary" data-dismiss="modal">Close</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- modal end -->
+            </div>
+        </div>
+        <input id="btn-load-more" class="btn btn-info center-block hidden" type="submit" value="Load More" ng-click="controller.update('last')" /> 
+    </div>
+    <!-- main-content end -->
+
 </div>
-<!-- Angular testing area end  -->
-
-
+<!-- MyController end -->

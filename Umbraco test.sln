@@ -5,6 +5,11 @@ VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Umbraco test", "Umbraco test\Umbraco test.csproj", "{3B045149-C204-4593-B474-28DDECB94295}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5E8FDA5C-8A16-45FA-97F9-29AE59E0366A}"
+	ProjectSection(SolutionItems) = preProject
+		WebEssentials-Settings.json = WebEssentials-Settings.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
