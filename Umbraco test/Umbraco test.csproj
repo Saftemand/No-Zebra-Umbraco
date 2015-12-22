@@ -461,7 +461,8 @@
     <Content Include="css\_mixins.scss" />
     <Content Include="css\modules\_thumbnail.scss" />
     <None Include="scripts\jquery-1.8.0-vsdoc.js" />
-    <Content Include="scripts\angular\controllers.js" />
+    <Content Include="js\angular\controllers.js" />
+    <Content Include="js\angular\controllers.min.js" />
     <Content Include="scripts\jquery-1.8.0.js" />
     <Content Include="scripts\jquery-1.8.0.min.js" />
     <Content Include="scripts\jquery.unobtrusive-ajax.js" />

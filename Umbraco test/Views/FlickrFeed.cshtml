@@ -5,6 +5,7 @@
 }
 <!-- MyController begin -->
 <div ng-controller="MyController as controller">
+
     <!-- jumbotron begin -->
     <div class="container">
         <div class="jumbotron search-box">
@@ -32,6 +33,7 @@
                 <a href="#{{item.unique_token}}" data-toggle="modal" class="thumbnail">
                     <img class="img-responsive" id="img-thumbnail" ng-src="{{item.media.m}}" alt="Photo of {{item.title}}" />
                 </a>
+
                 <!-- modal begin -->
                 <div class="modal fade" id="{{item.unique_token}}" role="dialog">
                     <div class="modal-dialog">
@@ -52,6 +54,7 @@
                     </div>
                 </div>
                 <!-- modal end -->
+
             </div>
         </div>
         <input id="btn-load-more" class="btn btn-info center-block hidden" type="submit" value="Load More" ng-click="controller.update('last')" /> 
