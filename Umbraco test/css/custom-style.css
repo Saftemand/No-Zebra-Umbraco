@@ -418,11 +418,16 @@ body {
   border-radius: 0;
 }
 
-.container {
+#bootstrap-overrides .container {
   width: 100%;
   padding-left: 0;
   padding-right: 0;
 }
+
+/*#bootstrap-overrides .thumbnail{
+    width:400px;
+    height: 300px;
+}*/
 
 .search-box {
   background-color: #022933;
@@ -441,4 +446,9 @@ body {
     position:relative;
     margin-left:0;
     margin-right: 10px;
+}
+
+#img-thumbnail{
+    width:400px;
+    height:300px;
 }

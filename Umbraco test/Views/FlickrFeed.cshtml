@@ -30,7 +30,7 @@
         <div class="row">
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 thumb" ng-repeat="item in photoCollection.items">
                 <a href="#{{item.unique_token}}" data-toggle="modal" class="thumbnail">
-                    <img class="img-responsive" style="width:400px;height:300px" ng-src="{{item.media.m}}" alt="Photo of {{item.title}}" />
+                    <img class="img-responsive" id="img-thumbnail" ng-src="{{item.media.m}}" alt="Photo of {{item.title}}" />
                 </a>
                 <!-- modal begin -->
                 <div class="modal fade" id="{{item.unique_token}}" role="dialog">

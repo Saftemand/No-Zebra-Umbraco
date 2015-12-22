@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using System.Globalization;
+using System.Diagnostics;
 
 namespace Umbraco_test.Model
 {
@@ -18,14 +20,14 @@ namespace Umbraco_test.Model
         
         [JsonProperty(PropertyName = "media")]
         public Media media { get; set; }
-        
+
         [JsonProperty(PropertyName = "date_taken")]
         public DateTime DateTaken { get; set; }
 
-        private string uniqueToken;
         [JsonProperty(PropertyName = "unique_token")]
-        public string UniqueToken { get {
-            return Guid.NewGuid().ToString();
-        } }
+        public string UniqueToken { 
+            get { return Guid.NewGuid().ToString(); } 
+        }
     }
+
 }

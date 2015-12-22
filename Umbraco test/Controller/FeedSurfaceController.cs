@@ -11,17 +11,18 @@ using System.Web.Mvc;
 using System.Web.UI;
 using Umbraco.Web.Mvc;
 using Umbraco_test.Model;
+using Umbraco_test.utils;
 
 namespace Umbraco_test.Controller
 {
 
     public class FeedSurfaceController : SurfaceController
     {
-        private string flickrApiAddress = "https://api.flickr.com/services/feeds/photos_public.gne?format=json";
+        private string flickrApiURL = "https://api.flickr.com/services/feeds/photos_public.gne?format=json";
 
         [HttpPost]
-        [OutputCache(Duration = 30, VaryByParam = "tags;sortByDate", Location = OutputCacheLocation.Client)]
-        public JsonResult HandleFormPost(string tags, string sortByDate, string firstOrLast) {
+        [OutputCache(Duration = 30, VaryByParam = "tags;sortByDate;firstOrLast", Location = OutputCacheLocation.Client)]
+        public JsonResult LoadPhotos(string tags, string sortByDate, string firstOrLast) {
             string result = ConsumeFlickrApi(tags);
 
             result = PickJson(result);
@@ -32,16 +33,13 @@ namespace Umbraco_test.Controller
                 photoCollection.Items = PhotoCollection.SortPhotoItemsDescending(photoCollection.Items);
             }
 
-            if (firstOrLast.ToLower().Equals("first"))
-            {
-                if (photoCollection.Items.Count > 10)
-                {
-                    photoCollection.Items.RemoveRange(9, photoCollection.Items.Count - 10);
+            if (firstOrLast.ToLower().Equals("first")){
+                if (photoCollection.Items.Count > 10){
+                    photoCollection.Items.RemoveRange(10, photoCollection.Items.Count - 10);
                 }
             } 
             
             result = ConvertPhotoCollectionToJson(photoCollection);
-            Debug.WriteLine("Result: " + result);
 
             return Json(result);
         }
@@ -51,14 +49,13 @@ namespace Umbraco_test.Controller
 
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-            HttpResponseMessage response = client.GetAsync(flickrApiAddress + "&tags=" + tags).Result;
+            HttpResponseMessage response = client.GetAsync(flickrApiURL + "&tags=" + tags).Result;
 
             return response.Content.ReadAsStringAsync().Result;
         }
 
         private string PickJson(string result){
-            if (!String.IsNullOrEmpty(result))
-            {
+            if (!String.IsNullOrEmpty(result)){
                 result = result.Substring(15, (result.Length - 16));
             }
 
@@ -70,9 +67,8 @@ namespace Umbraco_test.Controller
             return result;
         }
 
-        private string ConvertPhotoCollectionToJson(PhotoCollection photoCollection)
-        {
-            string result = JsonConvert.SerializeObject(photoCollection);
+        private string ConvertPhotoCollectionToJson(PhotoCollection photoCollection){
+            string result = JsonConvert.SerializeObject(photoCollection, new CustomDateTimeConverter());
             return result;
         }
 

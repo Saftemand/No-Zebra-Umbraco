@@ -9,7 +9,8 @@ var readAllTags = function () {
 var updateView = function ($scope, $http) {
     this.update = function (firstOrLast) {
         var tagString = readAllTags();
-        var sortByDate = $('#chbx_sort').is(':checked');
+        var sortByDate = $('#chbx-sort').prop('checked');
+        console.log('sortByDate: ' + sortByDate);
 
         if (tagString === '') {
             return;
@@ -17,7 +18,7 @@ var updateView = function ($scope, $http) {
 
         var dataObject = { 'tags': tagString, 'sortByDate': sortByDate, 'firstOrLast': firstOrLast };
         
-        $http.post('/umbraco/Surface/FeedSurface/HandleFormPost', dataObject)
+        $http.post('/umbraco/Surface/FeedSurface/LoadPhotos', dataObject)
             .success(function (data) {
                 $scope.photoCollection = JSON.parse(data);
                 console.log($scope.photoCollection.items);
@@ -38,11 +39,10 @@ var updateView = function ($scope, $http) {
 
 updateView.$inject = ['$scope', '$http'];
 
+myApp.controller('MyController', updateView);
+
 $().ready(function () {
     $('#btn-load-more').click(updateView);
 });
-
-//$scope and $http are put in the strings to keep their identity if the variable-names should be changed during minification
-myApp.controller('MyController', updateView);
 
 

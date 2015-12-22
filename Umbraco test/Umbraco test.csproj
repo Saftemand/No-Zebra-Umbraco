@@ -453,13 +453,13 @@
     <Content Include="media\drops-of-water.jpg" />
     <Content Include="media\sunset.jpg" />
     <Content Include="packages.config" />
-    <Content Include="scripts\angular\data.json" />
     <Content Include="css\custom-style.scss" />
     <Content Include="css\_variables.scss" />
     <Content Include="css\_base.scss" />
     <Content Include="css\modules\_search-box.scss" />
     <Content Include="css\_normalize.scss" />
     <Content Include="css\_mixins.scss" />
+    <Content Include="css\modules\_thumbnail.scss" />
     <None Include="scripts\jquery-1.8.0-vsdoc.js" />
     <Content Include="scripts\angular\controllers.js" />
     <Content Include="scripts\jquery-1.8.0.js" />
@@ -3193,6 +3193,7 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="utils\CustomDateTimeConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\NuGetBackup\20151219-132738\bin\" />
