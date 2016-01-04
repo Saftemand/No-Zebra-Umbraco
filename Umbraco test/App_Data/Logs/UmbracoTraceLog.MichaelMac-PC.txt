@@ -156,3 +156,47 @@ System.Exception: Error indexing queue items,System.NullReferenceException: Obje
  2016-01-04 20:43:29,772 [P6172/D2/T7] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-01-03 20:43:29
  2016-01-04 20:44:18,772 [P6172/D2/T20] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
  2016-01-04 20:44:58,459 [P6172/D2/T17] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2016-01-04 21:19:03,924 [P4416/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.3.4 application starting on MICHAELMAC-PC
+ 2016-01-04 21:19:03,959 [P4416/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2016-01-04 21:19:03,974 [P4416/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 14ms)
+ 2016-01-04 21:19:04,147 [P4416/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2016-01-04 21:19:04,794 [P4416/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 647ms)
+ 2016-01-04 21:19:04,814 [P4416/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2016-01-04 21:19:04,828 [P4416/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 13ms)
+ 2016-01-04 21:19:04,829 [P4416/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2016-01-04 21:19:04,847 [P4416/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 18ms)
+ 2016-01-04 21:19:04,872 [P4416/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2016-01-04 21:19:04,887 [P4416/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 15ms)
+ 2016-01-04 21:19:04,888 [P4416/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2016-01-04 21:19:04,904 [P4416/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 16ms)
+ 2016-01-04 21:19:05,002 [P4416/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2016-01-04 21:19:05,021 [P4416/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 18ms)
+ 2016-01-04 21:19:05,022 [P4416/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2016-01-04 21:19:05,035 [P4416/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 13ms)
+ 2016-01-04 21:19:05,983 [P4416/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2016-01-04 21:19:06,387 [P4416/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2016-01-04 21:19:06,451 [P4416/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2016-01-04 21:19:06,509 [P4416/D2/T1] WARN  Umbraco.Core.Sync.DatabaseServerMessenger - No last synced Id found, this generally means this is a new server/install. The server will rebuild its caches and indexes and then adjust it's last synced id to the latest found in the database and will start maintaining cache updates based on that id
+ 2016-01-04 21:19:06,586 [P4416/D2/T1] INFO  umbraco.content - Load Xml from file...
+ 2016-01-04 21:19:06,591 [P4416/D2/T1] INFO  umbraco.content - Loaded Xml from file.
+ 2016-01-04 21:19:06,596 [P4416/D2/T1] INFO  umbraco.content - Loading content from database...
+ 2016-01-04 21:19:10,155 [P4416/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2016-01-04 21:19:10,199 [P4416/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 43ms)
+ 2016-01-04 21:19:10,336 [P4416/D2/T7] ERROR UmbracoExamine.DataServices.UmbracoLogService - Provider=ExternalIndexer, NodeId=-1
+System.Exception: Error indexing queue items,System.NullReferenceException: Object reference not set to an instance of an object.
+   at UmbracoExamine.UmbracoContentIndexer.ValidateDocument(XElement node)
+   at Examine.LuceneEngine.Providers.LuceneIndexer.ProcessQueueItem(IndexOperation item, ICollection`1 indexedNodes, IndexWriter writer)
+   at Examine.LuceneEngine.Providers.LuceneIndexer.ForceProcessQueueItems(Boolean block), IndexSet: ExternalIndexSet
+ 2016-01-04 21:19:10,344 [P4416/D2/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2016-01-04 21:19:10,358 [P4416/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2016-01-04 21:19:10,359 [P4416/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2016-01-04 21:19:10,386 [P4416/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 6531ms)
+ 2016-01-04 21:19:11,675 [P4416/D2/T7] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:1055/umbraco (UmbracoModule request)
+ 2016-01-04 21:19:11,675 [P4416/D2/T6] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:1055/umbraco (UmbracoModule request)
+ 2016-01-04 21:19:11,776 [P4416/D2/T9] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:1055/umbraco (UmbracoModule request)
+ 2016-01-04 21:19:12,039 [P4416/D2/T7] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2016-01-04 21:19:12,055 [P4416/D2/T7] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 0 (took 15ms)
+ 2016-01-04 21:19:13,840 [P4416/D2/T11] INFO  umbraco.content - Save Xml to file...
+ 2016-01-04 21:19:13,869 [P4416/D2/T8] INFO  umbraco.content - Saved Xml to file.
+ 2016-01-04 21:19:17,117 [P4416/D2/T18] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2016-01-04 21:20:14,562 [P4416/D2/T7] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-01-03 21:20:14
