@@ -11,7 +11,6 @@ namespace Umbraco_test.Model
         [JsonProperty(PropertyName = "m")]
         public string MiniSrc { get; set; }
 
-        private string fullSrc;
         [JsonProperty(PropertyName = "f")]
         public string FullSrc {
             get {

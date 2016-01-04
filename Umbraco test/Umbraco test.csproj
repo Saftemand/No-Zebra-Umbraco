@@ -460,6 +460,9 @@
     <Content Include="css\_normalize.scss" />
     <Content Include="css\_mixins.scss" />
     <Content Include="css\modules\_thumbnail.scss" />
+    <Content Include="css\custom-style.css.map">
+      <DependentUpon>custom-style.css</DependentUpon>
+    </Content>
     <None Include="scripts\jquery-1.8.0-vsdoc.js" />
     <Content Include="js\angular\controllers.js" />
     <Content Include="js\angular\controllers.min.js" />

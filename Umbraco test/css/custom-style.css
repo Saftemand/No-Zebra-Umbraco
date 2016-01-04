@@ -264,8 +264,7 @@ select {
  *    `input` and others.
  */
 button,
-html input[type="button"],
-input[type="reset"],
+html input[type="button"], input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
@@ -424,31 +423,37 @@ body {
   padding-right: 0;
 }
 
-/*#bootstrap-overrides .thumbnail{
-    width:400px;
-    height: 300px;
+.no-margin {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/*#bootstrap-overrides .thumbnail {
+  width: 400px;
+  height: 300px;
 }*/
 
 .search-box {
   background-color: #022933;
-  padding-top:10px;
+  padding-top: 10px;
 }
 
-.form-holder{
-    max-width:30em;
+.form-holder {
+  max-width: 30em;
 }
 
-.search-component{
-    margin-bottom: 0.5em;
+.search-component {
+  margin-bottom: 0.5em;
 }
 
-#chbx-sort{
-    position:relative;
-    margin-left:0;
-    margin-right: 10px;
+#chbx-sort {
+  position: relative;
+  margin-left: 0;
 }
 
-#img-thumbnail{
-    width:400px;
-    height:300px;
+#img-thumbnail {
+  width: 400px;
+  height: 300px;
 }
+
+/*# sourceMappingURL=custom-style.css.map */
